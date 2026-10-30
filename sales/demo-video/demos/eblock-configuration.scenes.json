@@ -1,0 +1,8 @@
+[
+  { "scene": "intro", "text": "Esta es una demostración de configuración para E-block: una experiencia pensada para residentes y administración.", "lang": "es-CO", "overlay": { "type": "lower-third", "text": "Demostración de configuración", "placement": "bottom-left", "motion": "fade-in" } },
+  { "scene": "resident-access", "text": "El residente accede con una cédula de demostración y entra a una vista clara de sus servicios.", "lang": "es-CO", "overlay": { "type": "lower-third", "text": "Acceso simple para residentes", "placement": "bottom-left", "motion": "fade-in" } },
+  { "scene": "rental-overview", "text": "Desde el inicio puede consultar el estado de su arriendo y ver las opciones disponibles.", "lang": "es-CO", "overlay": { "type": "lower-third", "text": "Arriendo en un solo lugar", "placement": "bottom-left", "motion": "fade-in" } },
+  { "scene": "laundry-selection", "text": "Para lavandería, elige una máquina, un día y una hora. La reserva se revisa antes de confirmar.", "lang": "es-CO", "overlay": { "type": "lower-third", "text": "Reservas con reglas visibles", "placement": "bottom-left", "motion": "fade-in" } },
+  { "scene": "admin-view", "text": "En la vista administrativa, Diana puede priorizar pagos, turnos y reportes desde un solo panel.", "lang": "es-CO", "overlay": { "type": "lower-third", "text": "Visibilidad operativa", "placement": "bottom-left", "motion": "fade-in" } },
+  { "scene": "close", "text": "Esta demo muestra cómo se podría configurar una operación más ordenada para las sedes de E-block.", "lang": "es-CO", "overlay": { "type": "lower-third", "text": "E-block · demo de configuración", "placement": "bottom-left", "motion": "fade-in" } }
+]

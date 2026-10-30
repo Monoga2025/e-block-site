@@ -1,0 +1,30 @@
+{
+  "renderedAt": "2026-09-03",
+  "toolchain": {
+    "hyperframes": "0.8.12",
+    "renderMode": "local, one worker, low-memory, software Chrome",
+    "docker": false
+  },
+  "output": "../videos/eblock-short-sales-teaser-hyperframes-1080x1920.mp4",
+  "ffprobe": {
+    "durationSeconds": 38,
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "resolution": "1080x1920",
+    "frameRate": "30/1",
+    "pixelFormat": "yuv420p"
+  },
+  "representativeFrames": [
+    "../review-frames/hyperframes-teaser/frame-0_8.jpg",
+    "../review-frames/hyperframes-teaser/frame-4_5.jpg",
+    "../review-frames/hyperframes-teaser/frame-13_0.jpg",
+    "../review-frames/hyperframes-teaser/frame-23_0.jpg",
+    "../review-frames/hyperframes-teaser/frame-32_0.jpg",
+    "../review-frames/hyperframes-teaser/frame-37_0.jpg"
+  ],
+  "checks": {
+    "hyperframesCheck": "passed: lint, runtime, layout, motion, contrast",
+    "uiObstruction": "Opening and closing slates contain text; footage uses only brief motion-only wipe transitions.",
+    "claims": "Narration explicitly states that this is a local demonstration and avoids production, customer, or performance claims."
+  }
+}

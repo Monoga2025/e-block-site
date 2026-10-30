@@ -1,0 +1,2 @@
+const { chromium } = require('@playwright/test');
+(async()=>{const b=await chromium.launch({headless:true}); const p=await b.newPage({viewport:{width:390,height:844}}); await p.goto('https://eblock-production.up.railway.app/',{waitUntil:'networkidle'}); await p.locator('input').fill('1034657946'); await p.getByRole('button',{name:'Ingresar'}).click(); await p.waitForTimeout(300); console.log((await p.locator('body').innerText()).slice(0,12000)); console.log('BUTTONS',await p.locator('button').allTextContents()); await b.close()})();

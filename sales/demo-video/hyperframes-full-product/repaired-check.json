@@ -1,0 +1,431 @@
+[INFO] [Compiler] Fetched 11 font face(s) for "Inter" from Google Fonts (cached to C:\Users\Monoga\.cache\hyperframes\fonts\inter)
+[INFO] [Compiler] Fetched 11 font face(s) for "Inter" from Google Fonts (cached to C:\Users\Monoga\.cache\hyperframes\fonts\inter)
+[INFO] [Compiler] Injected deterministic @font-face rules for 2 requested font families
+{
+  "ok": true,
+  "strict": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "Track 1 has 7 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\Monoga\\Desktop\\Monoga OS\\e-block-moved\\sales\\demo-video\\hyperframes-full-product\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 7,
+    "findings": [
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 15,
+        "selector": "div.number",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 761.38,
+          "top": 150,
+          "right": 990,
+          "bottom": 380,
+          "width": 228.63,
+          "height": 230
+        },
+        "containerSelector": "div.accentline",
+        "text": "02",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.15,
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 761.38,
+          "y": 150,
+          "width": 228.63,
+          "height": 230
+        },
+        "firstSeen": 15,
+        "lastSeen": 15,
+        "occurrences": 1
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 15,
+        "selector": "div.halo",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 760,
+          "top": 780,
+          "right": 1480,
+          "bottom": 1500,
+          "width": 720,
+          "height": 720
+        },
+        "containerSelector": "#resident",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 400
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 760,
+          "y": 780,
+          "width": 720,
+          "height": 720
+        },
+        "firstSeen": 15,
+        "lastSeen": 15,
+        "occurrences": 1
+      },
+      {
+        "code": "panel_out_of_canvas",
+        "severity": "info",
+        "time": 15,
+        "selector": "div.halo",
+        "message": "Painted panel extends outside the composition canvas.",
+        "rect": {
+          "left": 760,
+          "top": 780,
+          "right": 1480,
+          "bottom": 1500,
+          "width": 720,
+          "height": 720
+        },
+        "containerSelector": "#root",
+        "text": "",
+        "fixHint": "Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 400
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 760,
+          "y": 780,
+          "width": 720,
+          "height": 720
+        },
+        "firstSeen": 15,
+        "lastSeen": 15,
+        "occurrences": 1
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 37,
+        "selector": "div.halo",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -380,
+          "top": 860,
+          "right": 340,
+          "bottom": 1580,
+          "width": 720,
+          "height": 720
+        },
+        "containerSelector": "#rent",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 380
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -380,
+          "y": 860,
+          "width": 720,
+          "height": 720
+        },
+        "firstSeen": 37,
+        "lastSeen": 37,
+        "occurrences": 1
+      },
+      {
+        "code": "panel_out_of_canvas",
+        "severity": "info",
+        "time": 37,
+        "selector": "div.halo",
+        "message": "Painted panel extends outside the composition canvas.",
+        "rect": {
+          "left": -380,
+          "top": 860,
+          "right": 340,
+          "bottom": 1580,
+          "width": 720,
+          "height": 720
+        },
+        "containerSelector": "#root",
+        "text": "",
+        "fixHint": "Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 380
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -380,
+          "y": 860,
+          "width": 720,
+          "height": 720
+        },
+        "firstSeen": 37,
+        "lastSeen": 37,
+        "occurrences": 1
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 60,
+        "selector": "div.halo",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -360,
+          "top": 840,
+          "right": 360,
+          "bottom": 1560,
+          "width": 720,
+          "height": 720
+        },
+        "containerSelector": "#incidents",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 360
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -360,
+          "y": 840,
+          "width": 720,
+          "height": 720
+        },
+        "firstSeen": 60,
+        "lastSeen": 60,
+        "occurrences": 1
+      },
+      {
+        "code": "panel_out_of_canvas",
+        "severity": "info",
+        "time": 60,
+        "selector": "div.halo",
+        "message": "Painted panel extends outside the composition canvas.",
+        "rect": {
+          "left": -360,
+          "top": 840,
+          "right": 360,
+          "bottom": 1560,
+          "width": 720,
+          "height": 720
+        },
+        "containerSelector": "#root",
+        "text": "",
+        "fixHint": "Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 360
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -360,
+          "y": 840,
+          "width": 720,
+          "height": 720
+        },
+        "firstSeen": 60,
+        "lastSeen": 60,
+        "occurrences": 1
+      }
+    ],
+    "duration": 74,
+    "samples": [
+      0,
+      15,
+      37,
+      60,
+      73.9
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 7,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 3,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.23:1; WCAG AA requires 3:1.",
+        "text": "02",
+        "fg": "rgb(96,43,23)",
+        "bg": "rgb(78,29,14)",
+        "ratio": 1.23,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(145,109,95)",
+        "large": true,
+        "selector": "main > section:nth-of-type(3) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 761.375,
+          "y": 150,
+          "width": 228.625,
+          "height": 230
+        },
+        "time": 15
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.23:1; WCAG AA requires 3:1.",
+        "text": "03",
+        "fg": "rgb(95,43,23)",
+        "bg": "rgb(77,29,14)",
+        "ratio": 1.23,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(145,109,95)",
+        "large": true,
+        "selector": "main > section:nth-of-type(4) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 757.75,
+          "y": 150,
+          "width": 232.25,
+          "height": 230
+        },
+        "time": 37
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.23:1; WCAG AA requires 3:1.",
+        "text": "05",
+        "fg": "rgb(94,42,23)",
+        "bg": "rgb(76,28,14)",
+        "ratio": 1.23,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(144,108,95)",
+        "large": true,
+        "selector": "main > section:nth-of-type(6) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 762.109375,
+          "y": 150,
+          "width": 227.890625,
+          "height": 230
+        },
+        "time": 60
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      0,
+      15,
+      37,
+      60,
+      73.9
+    ],
+    "checked": 9,
+    "passed": 6
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "_meta": {
+    "version": "0.8.12",
+    "latestVersion": "0.8.27",
+    "updateAvailable": true
+  }
+}

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es" data-resolution="portrait">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080,height=1920" />
+  <script src="node_modules/gsap/dist/gsap.min.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background:#100b09; }
+    body { font-family: Arial, Helvetica, sans-serif; }
+    #root { position:relative; width:1080px; height:1920px; overflow:hidden; color:#fff7ed; background:radial-gradient(circle at 78% 9%,#5a200e 0,#28130e 25%,#100b09 65%); }
+    .texture { position:absolute; inset:-40px; opacity:.08; background-image:linear-gradient(115deg,transparent 25%,rgba(255,143,61,.18) 25.2%,transparent 25.5%), repeating-linear-gradient(0deg,transparent 0 7px,rgba(255,255,255,.12) 8px); pointer-events:none; }
+    .halo { position:absolute; width:720px; height:720px; border-radius:50%; border:1px solid rgba(255,154,72,.25); box-shadow:0 0 180px rgba(255,94,32,.22), inset 0 0 100px rgba(255,99,34,.10); }
+    .halo:after { content:''; position:absolute; inset:100px; border-radius:inherit; border:1px solid rgba(255,255,255,.10); }
+    .scene { position:absolute; inset:0; opacity:0; overflow:hidden; z-index:2; } .media { position:absolute; z-index:3; object-fit:cover; border-radius:54px; opacity:0; } #admin-video,#rent-video,#laundry-video { left:100px; top:481px; width:880px; height:1088px; } #resident-video,#incidents-video { left:146px; top:516px; width:788px; height:988px; }
+    .kicker { color:#ffad6b; letter-spacing:7px; font-size:25px; font-weight:800; }
+    .headline { font-size:76px; line-height:1.02; letter-spacing:-3px; font-weight:800; margin:0; max-width:830px; }
+    .bodycopy { margin:28px 0 0; max-width:720px; color:#fed7aa; font-size:30px; line-height:1.34; }
+    .scene:not(#outro) .bodycopy { display:none; }
+    .device-wrap { position:absolute; left:84px; top:465px; width:912px; height:1120px; border-radius:68px; padding:16px; background:linear-gradient(135deg,#ffbc84 0%,#9b3c13 18%,#2c120b 54%,#e86420 100%); box-shadow:0 38px 90px rgba(0,0,0,.62),0 0 70px rgba(255,101,35,.26); }
+    .device-wrap:before { content:''; position:absolute; inset:16px; border-radius:54px; border:1px solid rgba(255,231,210,.26); pointer-events:none; z-index:2; }
+    .device { position:relative; z-index:1; width:100%; height:100%; object-fit:cover; border-radius:54px; background:#0b1015; display:block; } .device-still { position:absolute; z-index:0; inset:16px; width:calc(100% - 32px); height:calc(100% - 32px); object-fit:cover; border-radius:54px; }
+    .device-wrap.mini { left:130px; top:500px; width:820px; height:1020px; }
+    .side-title { position:absolute; left:88px; top:205px; max-width:860px; }
+    .side-title.right { text-align:right; left:auto; right:88px; }
+    .number { position:absolute; right:90px; top:150px; font-size:190px; font-weight:800; letter-spacing:-12px; color:rgba(255,171,107,.10); }
+    .accentline { width:96px; height:6px; border-radius:6px; background:#ff7a30; margin:25px 0; box-shadow:0 0 24px rgba(255,122,48,.9); }
+    #hook { opacity:1; }
+    #hook .halo { right:-300px; top:-220px; }
+    #hook .headline { position:absolute; left:76px; top:194px; font-size:82px; max-width:800px; }
+    #hook .subhead { position:absolute; left:80px; top:480px; font-size:31px; line-height:1.3; color:#fed7aa; max-width:700px; }
+    .hook-devices { position:absolute; top:690px; left:85px; width:910px; height:780px; }
+    .hook-device { position:absolute; width:375px; height:700px; border-radius:42px; padding:10px; background:linear-gradient(135deg,#ffbc84,#8f3514 40%,#230e09); box-shadow:0 26px 60px rgba(0,0,0,.48); overflow:hidden; }
+    .hook-device video, .hook-device img { width:100%; height:100%; object-fit:cover; border-radius:33px; display:block; }
+    .hook-device.one { left:40px; top:74px; transform:rotate(-9deg); }.hook-device.two { right:35px; top:0; transform:rotate(8deg); }
+    #hook .brand { position:absolute; bottom:130px; left:80px; font-size:34px; font-weight:800; letter-spacing:6px; color:#ffad6b; }
+    #admin .halo { left:-370px; top:780px; } #resident .halo { right:-400px; top:780px; } #rent .halo { left:-380px; top:860px; } #laundry .halo { right:-390px; top:800px; } #incidents .halo { left:-360px; top:840px; }
+    #outro { display:flex; align-items:center; justify-content:center; text-align:center; background:radial-gradient(circle at 50% 20%,#5d210d 0,#25100b 38%,#100b09 72%); }
+    #outro .halo { width:900px; height:900px; top:510px; left:90px; }
+    #outro .logo { position:relative; font-size:105px; letter-spacing:-6px; font-weight:800; } #outro .logo span{color:#ff8b43;}
+    #outro .bodycopy { position:relative; color:#fed7aa; max-width:760px; }
+    .sweep { position:absolute; inset:0; pointer-events:none; opacity:0; background:linear-gradient(110deg,transparent 37%,rgba(255,125,55,.12) 46%,rgba(255,249,245,.78) 50%,rgba(255,125,55,.12) 54%,transparent 63%); }
+  </style>
+</head>
+<body>
+<main id="root" data-composition-id="eblock-full-product-walkthrough" data-start="0" data-duration="74" data-width="1080" data-height="1920" data-fps="30">
+  <div class="texture"></div>
+  <section id="hook" class="scene clip" data-start="0" data-duration="2" data-track-index="1">
+    <div class="halo"></div><p class="kicker" style="position:absolute;left:80px;top:100px">E-BLOCK</p>
+    <h1 class="headline">El edificio<br>en orden.<br><span style="color:#ff934d">En una vista.</span></h1>
+    <p class="subhead">Reservas, arriendos e incidentes con contexto.</p>
+    <div class="hook-devices"><div class="hook-device one"><img src="assets/eblock-complete-start.png" alt="" /></div><div class="hook-device two"><img src="assets/eblock-complete-middle.png" alt="" /></div></div><div class="brand">GESTIÓN HABITACIONAL</div>
+  </section>
+  <section id="admin" class="scene clip" data-start="2" data-duration="12" data-track-index="1"><div class="halo"></div><div class="number">01</div><div class="side-title"><div class="kicker">ADMINISTRACIÓN</div><div class="accentline"></div><h2 class="headline">Visibilidad para actuar.</h2><p class="bodycopy">El estado del edificio se consulta con residentes, arriendos, incidentes y reservas en el mismo entorno.</p></div><div class="device-wrap"><img class="device-still" src="assets/admin-still.jpg" alt="" /></div></section>
+  <section id="resident" class="scene clip" data-start="14" data-duration="12" data-track-index="1"><div class="halo"></div><div class="number">02</div><div class="side-title right"><div class="kicker">RESIDENTES</div><div class="accentline" style="margin-left:auto"></div><h2 class="headline" style="margin-left:auto">Acceso directo a lo que importa.</h2><p class="bodycopy" style="margin-left:auto">Cada residente entra a su espacio y consulta la información que le corresponde.</p></div><div class="device-wrap mini"><img class="device-still" src="assets/resident-still.jpg" alt="" /></div></section>
+  <section id="rent" class="scene clip" data-start="26" data-duration="14" data-track-index="1"><div class="halo"></div><div class="number">03</div><div class="side-title"><div class="kicker">ARRIENDOS</div><div class="accentline"></div><h2 class="headline">El estado de cada unidad, claro.</h2><p class="bodycopy">Revisá qué está al día, qué requiere atención y la información que acompaña cada caso.</p></div><div class="device-wrap"><img class="device-still" src="assets/rent-still.jpg" alt="" /></div></section>
+  <section id="laundry" class="scene clip" data-start="40" data-duration="17" data-track-index="1"><div class="halo"></div><div class="number">04</div><div class="side-title right"><div class="kicker">LAVANDERÍA</div><div class="accentline" style="margin-left:auto"></div><h2 class="headline" style="margin-left:auto">Reservar deja de ser coordinar por mensajes.</h2><p class="bodycopy" style="margin-left:auto">El residente consulta disponibilidad, elige horario y confirma su reserva.</p></div><div class="device-wrap"><img class="device-still" src="assets/laundry-still.jpg" alt="" /></div></section>
+  <section id="incidents" class="scene clip" data-start="57" data-duration="12" data-track-index="1"><div class="halo"></div><div class="number">05</div><div class="side-title"><div class="kicker">SEGUIMIENTO</div><div class="accentline"></div><h2 class="headline">Las novedades también tienen su lugar.</h2><p class="bodycopy">Incidentes registrados dentro del mismo entorno, con una visión general para acompañar la operación.</p></div><div class="device-wrap mini"><img class="device-still" src="assets/incident-still.jpg" alt="" /></div></section>
+  <section id="outro" class="scene clip" data-start="69" data-duration="5" data-track-index="1"><div class="halo"></div><div><div class="logo">E-<span>BLOCK</span></div><p class="bodycopy">Menos coordinación dispersa.<br>Más claridad para todos.</p></div></section>
+  <video id="admin-video" class="media" src="assets/admin-review.mp4" data-start="2" data-duration="9" data-track-index="2" muted playsinline preload="auto"></video><video id="resident-video" class="media" src="assets/resident-access.mp4" data-start="14" data-duration="8" data-track-index="2" muted playsinline preload="auto"></video><video id="rent-video" class="media" src="assets/rent-overview.mp4" data-start="26" data-duration="8" data-track-index="2" muted playsinline preload="auto"></video><video id="laundry-video" class="media" src="assets/laundry-flow.mp4" data-start="40" data-duration="10" data-track-index="2" muted playsinline preload="auto"></video><video id="incidents-video" class="media" src="assets/close-context.mp4" data-start="57" data-duration="8" data-track-index="2" muted playsinline preload="auto"></video><audio id="narration" data-start="0" data-duration="67.032" data-track-index="0" src="assets/narration.mp3" preload="auto"></audio><div id="sweep" class="sweep"></div>
+</main>
+<script>
+window.__timelines=window.__timelines||{}; const tl=gsap.timeline({paused:true,defaults:{ease:'power3.out'}}); const scenes=[['#hook',0,2],['#admin',2,12],['#resident',14,12],['#rent',26,14],['#laundry',40,17],['#incidents',57,12],['#outro',69,5]];
+scenes.forEach(([id,at,d],i)=>{ tl.fromTo(id,{opacity:0,scale:1.025,filter:'blur(4px)'},{opacity:1,scale:1,filter:'blur(0px)',duration:.52},at); if(i>0&&i<6) tl.fromTo(id+' .side-title',{y:38,opacity:0},{y:0,opacity:1,duration:.6},at+.16); if(i>0&&i<6) tl.fromTo(id+' .device-wrap',{y:80,scale:.96,opacity:0},{y:0,scale:1,opacity:1,duration:.82,ease:'power4.out'},at+.34); if(i>0&&i<6){ const mediaDur=[0,9,8,8,10,8][i]; tl.fromTo(id+'-video',{opacity:0},{opacity:1,duration:.35},at+.34); tl.to(id+'-video',{opacity:0,duration:.18},at+mediaDur-.18); } tl.to(id,{opacity:0,scale:1.012,filter:'blur(2px)',duration:.35},at+d-.35); });
+tl.fromTo('#hook .headline',{y:35,opacity:0},{y:0,opacity:1,duration:.42},.08).fromTo('#hook .subhead',{y:18,opacity:0},{y:0,opacity:1,duration:.34},.26).fromTo('.hook-device',{y:90,opacity:0,scale:.94},{y:0,opacity:1,scale:1,duration:.55,stagger:.08},.2).fromTo('#outro .logo',{y:28,opacity:0,scale:.96},{y:0,opacity:1,scale:1,duration:.5},69.18).fromTo('#outro .bodycopy',{y:18,opacity:0},{y:0,opacity:1,duration:.4},69.42);
+[1.65,13.65,25.65,39.65,56.65,68.65].forEach(at=>tl.fromTo('#sweep',{xPercent:-120,opacity:0},{xPercent:120,opacity:.85,duration:.42,ease:'power2.inOut'},at)); window.__timelines['eblock-full-product-walkthrough']=tl;
+</script></body></html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+E-BLOCK reúne en una sola vista lo que hoy suele quedar repartido entre mensajes, notas y seguimientos manuales.
+
+Desde administración, el estado del edificio se consulta con claridad: residentes, arriendos, incidentes y reservas, sin perder el contexto de cada operación.
+
+Para cada residente, el acceso es directo. Puede entrar a su espacio y consultar la información que le corresponde, sin navegar por procesos de administración.
+
+El seguimiento de arriendos concentra el estado de cada unidad. Así, la administración puede revisar qué está al día, qué requiere atención y qué información acompaña cada caso.
+
+Y las reservas de lavandería se vuelven un flujo visible. El residente consulta disponibilidad, elige un horario y confirma su reserva. La administración conserva la visión general para acompañar la operación.
+
+Cuando surge una novedad, los incidentes también quedan registrados dentro del mismo entorno. Menos coordinación dispersa. Más claridad para quienes administran y para quienes viven allí.
+
+E-BLOCK. Una forma más ordenada de gestionar la vida diaria del edificio.

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>E-BLOCK Launch · Sales Engine</title>
+  <style>
+    :root { --ink:#1f1512; --muted:#685d57; --paper:#fffaf6; --line:#eaded6; --brand:#d8471a; --dark:#2b120d; --gold:#ffcf6d; --ok:#18794e; --warn:#9a5b00; --soft:#fff1e9; }
+    * { box-sizing:border-box; } body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color:var(--ink); background:#f7f1ed; line-height:1.5; }
+    .hero { padding:64px 24px 48px; color:white; background:radial-gradient(circle at 80% -20%,#f06c3e 0,transparent 35%), var(--dark); }
+    .wrap { width:min(1160px,100%); margin:auto; } .eyebrow { color:var(--gold); font-size:.76rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+    h1 { margin:10px 0 16px; font-size:clamp(2.35rem,6vw,5.2rem); line-height:.98; letter-spacing:-.065em; max-width:850px; } h2 { margin:0 0 10px; font-size:1.35rem; letter-spacing:-.025em; } h3 { margin:0 0 7px; font-size:1rem; }
+    .subtitle { max-width:690px; color:#f4dcd1; font-size:1.1rem; } .facts { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; } .chip { padding:8px 11px; border:1px solid #805143; border-radius:999px; color:#ffece5; font-size:.84rem; }
+    main { padding:28px 20px 80px; } .grid { display:grid; grid-template-columns:repeat(12,1fr); gap:16px; } .card { background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:22px; box-shadow:0 8px 25px rgba(62,31,20,.04); }
+    .span-4{grid-column:span 4}.span-5{grid-column:span 5}.span-6{grid-column:span 6}.span-7{grid-column:span 7}.span-8{grid-column:span 8}.span-12{grid-column:span 12}
+    .price { font-size:2.25rem; line-height:1; font-weight:850; color:var(--brand); letter-spacing:-.06em; margin:12px 0 5px; }.small{color:var(--muted);font-size:.89rem}.tag{display:inline-block;padding:4px 8px;border-radius:999px;background:var(--soft);color:var(--brand);font-size:.73rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase}.list{padding-left:19px;margin:11px 0 0}.list li{margin:6px 0}.rule{border-left:3px solid var(--brand);padding:10px 0 10px 14px;margin-top:14px;background:#fff8f4}.danger{border-left-color:#a72b16;background:#fff3f0}.ok{border-left-color:var(--ok);background:#f1fbf5}.warning{border-left-color:var(--warn);background:#fff9ed}
+    .stage { display:grid; grid-template-columns:44px 1fr; gap:13px; padding:16px 0; border-top:1px solid var(--line); }.stage:first-of-type{border-top:0}.num{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:var(--dark);color:white;font-weight:800}.stage p{margin:3px 0 0;color:var(--muted);font-size:.92rem}.stage strong{font-size:1rem}
+    .message{position:relative;background:#eef7e9;border:1px solid #cce6c5;border-radius:15px 15px 15px 4px;padding:15px;margin-top:12px;font-size:.94rem;white-space:pre-line}.message:before{content:"WhatsApp · copiar y adaptar";position:absolute;top:-11px;left:10px;padding:2px 7px;border-radius:8px;background:#fff;color:#397349;font-size:.68rem;font-weight:800}.copy{margin-top:12px;border:0;border-radius:9px;background:var(--dark);color:white;padding:9px 12px;font-weight:750;cursor:pointer}.copy:focus-visible{outline:3px solid var(--gold);outline-offset:2px}.tree details{border-top:1px solid var(--line);padding:11px 0}.tree summary{cursor:pointer;font-weight:750}.tree p{margin:8px 0 0;color:var(--muted);font-size:.92rem}
+    table{width:100%;border-collapse:collapse;margin-top:10px;font-size:.9rem}th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--muted);font-size:.73rem;text-transform:uppercase;letter-spacing:.06em}.quote{font-size:1.05rem;margin:10px 0 0;padding-left:16px;border-left:3px solid var(--brand)}.footer{margin-top:24px;color:var(--muted);font-size:.78rem}.check{display:flex;gap:9px;align-items:flex-start;margin:9px 0}.dot{width:18px;height:18px;flex:0 0 18px;border:1.5px solid #b8a9a0;border-radius:5px;margin-top:2px}.cta{display:inline-block;margin-top:8px;padding:10px 13px;border-radius:10px;background:var(--brand);color:#fff;font-weight:800;text-decoration:none}
+    @media(max-width:760px){.hero{padding:44px 20px 36px}.span-4,.span-5,.span-6,.span-7,.span-8{grid-column:span 12}.card{padding:18px}h1{font-size:2.7rem}.grid{gap:12px}table{font-size:.8rem}th,td{padding:8px 5px}}
+  </style>
+</head>
+<body>
+  <header class="hero"><div class="wrap">
+    <div class="eyebrow">Daniel Monoga · Founder-led sales system</div>
+    <h1>Vender una transformación operativa, no “una app”.</h1>
+    <p class="subtitle">Embudo comercial para una propuesta inicial de E-BLOCK. Cada paso tiene un objetivo, una prueba permitida y una salida clara. Nada de testimonios inventados, urgencia falsa ni soporte ilimitado.</p>
+    <div class="facts"><span class="chip">Prospecto: E-BLOCK</span><span class="chip">Alcance: 5 sedes</span><span class="chip">Canal inicial: WhatsApp 1:1</span><span class="chip">Demo: 10 minutos</span></div>
+  </div></header>
+  <main><div class="wrap grid">
+    <section class="card span-5"><span class="tag">Oferta de trabajo</span><h2>Configuración E-BLOCK Launch</h2><div class="price">COP 2.000.000</div><p class="small">50% para iniciar · 50% contra entrega acordada</p><ul class="list"><li>Configuración inicial para las cinco sedes acordadas.</li><li>Registro de residentes por Diana y carga inicial definida.</li><li>Capacitación de administración y 30 días de correcciones de alcance.</li><li>Plan de salida a producción, sujeto a endurecimiento, datos reales y aceptación.</li></ul><div class="rule warning"><strong>Operación mensual: COP 250.000/mes.</strong><br><span class="small">Solo soporte limitado y operación definida por escrito. Hosting, pasarela, integraciones, funciones nuevas y cambios grandes se cotizan aparte.</span></div></section>
+    <section class="card span-7"><span class="tag">Prueba segura</span><h2>Lo que se puede afirmar</h2><div class="ok rule"><strong>Una demo funcional ya existe.</strong> Se puede mostrar una experiencia diseñada específicamente para residentes y administración de E-BLOCK.</div><div class="ok rule"><strong>Contexto verificable:</strong> el sitio público de E-BLOCK lista cinco ubicaciones y comunica más de 120 habitaciones. Verificar antes de cada envío.</div><div class="danger rule"><strong>No decir:</strong> “ya funcionó en otros edificios”, “la nube cuesta muchísimo”, “está 100% listo para producción” o cualquier resultado que no esté documentado.</div></section>
+
+    <section class="card span-7"><span class="tag">Embudo principal</span><h2>La ruta que mueve el negocio</h2>
+      <div class="stage"><div class="num">1</div><div><strong>Preparar la prueba</strong><p>Grabar teaser vertical de 20–30 segundos. Perfil de WhatsApp profesional. Tener demo, alcance y precio internamente claros. No enviar credenciales.</p></div></div>
+      <div class="stage"><div class="num">2</div><div><strong>Abrir conversación</strong><p>Enviar un WhatsApp personalizado con video. El objetivo no es cerrar, es conseguir interés o una demo.</p></div></div>
+      <div class="stage"><div class="num">3</div><div><strong>Descubrir antes de presentar</strong><p>En la demo, preguntar cómo controlan hoy pagos, reservas y novedades. Mostrar únicamente pantallas que respondan a lo que el gerente confirme.</p></div></div>
+      <div class="stage"><div class="num">4</div><div><strong>Propuesta y plan mutuo</strong><p>Mandar una página el mismo día, con alcance, fuera de alcance, pagos y siguiente hito. Agendar su revisión, no “esperar respuesta”.</p></div></div>
+      <div class="stage"><div class="num">5</div><div><strong>Negociar con intercambios</strong><p>Si pide rebaja, intercambiar por compromiso, fecha o reducción de alcance. Nunca regalar soporte ilimitado ni rebajar por silencio.</p></div></div>
+    </section>
+    <section class="card span-5"><span class="tag">Activos por etapa</span><h2>Qué preparar</h2><div class="check"><span class="dot"></span><span><strong>Teaser:</strong> 20–30 s, sin voz larga. Problema → pantalla → resultado.</span></div><div class="check"><span class="dot"></span><span><strong>Demo:</strong> inicio de residente, arriendo, reserva y panel de administración.</span></div><div class="check"><span class="dot"></span><span><strong>One-pager:</strong> problema, alcance, exclusiones, inversión, pagos y siguiente paso.</span></div><div class="check"><span class="dot"></span><span><strong>Registro del deal:</strong> fecha, respuesta literal, etapa, próximo paso y fecha.</span></div><div class="rule"><strong>Regla:</strong> precio especial solo existe si el límite es real. Si la fecha vence, el precio o el alcance cambian de verdad.</div></section>
+
+    <section class="card span-6"><span class="tag">Primer contacto</span><h2>Mensaje + teaser, no link crudo</h2><p class="small">Personalizar el nombre. Adjuntar el video justo después de enviar el texto.</p>
+      <div class="message" id="m1">Hola, [Nombre]. Soy Daniel Monoga.
+
+Preparé una visualización corta de cómo podría centralizarse la operación de E-BLOCK: residentes, estado de arriendos, reservas y novedades entre sus sedes.
+
+Te la comparto porque creo que puede reducir bastante seguimiento manual. Si te hace sentido, te muestro la versión completa en 10 minutos.</div><button class="copy" data-copy="m1">Copiar mensaje</button>
+      <div class="rule"><strong>Por qué video y no enlace:</strong> el video crea comprensión y protege la demo de contexto perdido. El enlace se muestra después de interés o durante la demostración guiada.</div>
+    </section>
+    <section class="card span-6"><span class="tag">Guion demo</span><h2>10 minutos, con una pregunta primero</h2>
+      <table><thead><tr><th>Min</th><th>Acción</th><th>Objetivo</th></tr></thead><tbody>
+        <tr><td>0–2</td><td>“¿Cómo manejan hoy pagos, reservas y novedades entre sedes?”</td><td>Encontrar el dolor real, no asumirlo.</td></tr>
+        <tr><td>2–6</td><td>Mostrar residente: acceso, arriendo y reserva.</td><td>Hacer visible la reducción de preguntas repetidas.</td></tr>
+        <tr><td>6–8</td><td>Mostrar administración y distinguir pendientes de acciones del residente.</td><td>Probar orden operativo.</td></tr>
+        <tr><td>8–10</td><td>Recapitular con sus palabras y presentar alcance, inversión y siguiente paso.</td><td>Pedir decisión de avanzar a propuesta.</td></tr>
+      </tbody></table>
+      <p class="quote">“Si configuramos esto con sus cinco sedes y el flujo real de Diana, ¿qué tendría que pasar para que lo aprueben?”</p>
+    </section>
+
+    <section class="card span-8 tree"><span class="tag">Árbol de respuestas</span><h2>Qué hacer según responda</h2>
+      <details open><summary>“Me interesa”</summary><p>Responder con dos horarios concretos: “Perfecto. ¿Te funciona martes 10:00 o miércoles 15:00 para mostrarte 10 minutos?” Registrar fecha y responsable.</p></details>
+      <details><summary>“Mándame información”</summary><p>Mandar el teaser y un one-pager, no una lista de funciones. Cerrar con: “¿Agendamos 10 minutos para revisarlo con el flujo real de sus sedes?”</p></details>
+      <details><summary>“¿Cuánto cuesta?”</summary><p>Dar el precio con contexto: “La configuración de lanzamiento para las cinco sedes es COP 2M, 50% al inicio y 50% al entregar el alcance acordado. La operación mensual propuesta es COP 250k. En la demo te muestro exactamente qué incluye y qué queda fuera.”</p></details>
+      <details><summary>“Es caro”</summary><p>No bajar en el acto. Preguntar: “¿Frente a qué alternativa lo están comparando?” Luego ofrecer solo intercambio real: pago más rápido, menos alcance o una fase inicial. Nunca quitar precio sin quitar algo.</p></details>
+      <details><summary>“Ya tenemos sistema / lo hacemos por WhatsApp”</summary><p>“Tiene sentido. No busco reemplazar algo que ya les funciona. ¿Qué parte todavía les obliga a perseguir información o responder lo mismo varias veces?” Si no hay dolor, calificar como no prioritario.</p></details>
+      <details><summary>“Ahora no”</summary><p>“Entiendo. ¿Qué tendría que cambiar para que sea prioridad y cuándo tiene sentido retomar?” Pedir permiso para volver en una fecha específica.</p></details>
+      <details><summary>No responde</summary><p>Día 3: un recordatorio de una frase. Día 7: pregunta de prioridad y fecha real de la condición de lanzamiento. Día 14: cierre respetuoso. Después, detener contacto salvo permiso explícito.</p></details>
+    </section>
+    <section class="card span-4"><span class="tag">Calificación</span><h2>No persigas un “tal vez”</h2><p class="small">No envíes propuesta final hasta poder responder:</p><div class="check"><span class="dot"></span><span>¿Existe dolor operativo confirmado?</span></div><div class="check"><span class="dot"></span><span>¿[Nombre] decide o puede llevar la propuesta al decisor?</span></div><div class="check"><span class="dot"></span><span>¿Hay fecha o evento que justifique actuar?</span></div><div class="check"><span class="dot"></span><span>¿Aceptan datos reales, onboarding y alcance definido?</span></div><div class="rule warning"><strong>Si faltan 2 o más:</strong> no descuentos. Nurture o cerrar como no prioritario.</div></section>
+
+    <section class="card span-12"><span class="tag">Cadencia y control</span><h2>Seguimiento que no parece persecución</h2>
+      <table><thead><tr><th>Día</th><th>Mensaje</th><th>Señal que buscamos</th><th>Acción siguiente</th></tr></thead><tbody>
+        <tr><td>0</td><td>Mensaje personalizado + teaser.</td><td>Interés, curiosidad o negativa.</td><td>Agendar demo o responder según árbol.</td></tr>
+        <tr><td>3</td><td>“¿Alcanzaste a ver la visualización de E-BLOCK?”</td><td>Reconocimiento de prioridad.</td><td>Ofrecer 2 horarios, no “avísame”.</td></tr>
+        <tr><td>7</td><td>“Estoy cerrando la agenda de configuración de lanzamiento el [fecha real]. ¿Tiene sentido revisarlo o lo dejamos para más adelante?”</td><td>Decisión o fecha futura.</td><td>Demo, nurture o cerrar.</td></tr>
+        <tr><td>14</td><td>“Cierro esta conversación para no insistir. Si la operación de las sedes vuelve a ser prioridad, puedo retomarla con ustedes.”</td><td>Permiso futuro o cierre.</td><td>Marcar closed-lost o nurture con fecha.</td></tr>
+      </tbody></table>
+      <p class="footer">Fuentes de contexto: sitio público de E-BLOCK y conversación de alcance. Metodología: ventas consultivas, investigación antes de outreach, descubrimiento antes de propuesta y negociación por intercambio. Validar precio, fecha y alcance antes de enviar cualquier texto.</p>
+    </section>
+  </div></main>
+  <script>
+    document.querySelectorAll('[data-copy]').forEach((button) => {
+      button.addEventListener('click', async () => {
+        const text = document.getElementById(button.dataset.copy).innerText.replace('WhatsApp · copiar y adaptar', '').trim();
+        try { await navigator.clipboard.writeText(text); button.textContent = 'Copiado'; setTimeout(() => button.textContent = 'Copiar mensaje', 1600); } catch { button.textContent = 'Seleccioná y copiá'; }
+      });
+    });
+  </script>
+</body>
+</html>

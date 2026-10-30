@@ -1,0 +1,6 @@
+Version malisima/
+frontend/app/node_modules/
+__pycache__/
+.monoga/
+docs/
+design-reference/

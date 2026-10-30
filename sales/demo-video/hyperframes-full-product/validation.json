@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "output": "C:\\Users\\Monoga\\Desktop\\Monoga OS\\e-block-moved\\sales\\demo-video\\videos\\eblock-full-product-hyperframes-repaired-1080x1920.mp4",
+  "render_strategy": "HyperFrames scene cards captured from the authored GSAP timeline, combined with the original E-BLOCK UI clips through a deterministic FFmpeg timeline",
+  "diagnosis": {
+    "invalid_render_symptom": "The previous HyperFrames export returned to the opening hook near the end and produced a blank mid-timeline frame.",
+    "source_test": "Direct cold seeks at 0.8, 2.8, 14.8, 26.8, 40.8, 57.8, and 72 seconds produced the intended distinct scenes in Chromium.",
+    "conclusion": "The authored timeline was valid, but this host's long HyperFrames export path did not apply the timeline consistently. The final MP4 therefore uses a deterministic equivalent render pipeline instead of the unreliable long export path."
+  },
+  "ffprobe": {
+    "container": "mov,mp4,m4a,3gp,3g2,mj2",
+    "duration_seconds": 74.0,
+    "size_bytes": 11978935,
+    "video": {
+      "codec": "h264",
+      "profile": "High",
+      "width": 1080,
+      "height": 1920,
+      "fps": 30,
+      "frames": 2220
+    },
+    "audio": {
+      "codec": "aac",
+      "sample_rate_hz": 48000,
+      "channels": 1,
+      "peak_db": -2.796114,
+      "rms_db": -23.123639
+    }
+  },
+  "visual_samples": [
+    {
+      "time_seconds": 0,
+      "file": "..\\review-frames\\hyperframes-full-product-repaired\\frame-00s.jpg",
+      "sha256": "B1E5CAA963AB0F529F782412D5909145F4AFB0822255BE9B268EED7D81747BF6",
+      "observed": "Fast E-BLOCK hook with two prominent real product views."
+    },
+    {
+      "time_seconds": 15,
+      "file": "..\\review-frames\\hyperframes-full-product-repaired\\frame-15s.jpg",
+      "sha256": "043ABD3739C0F90D256DBC53D638FD5F63D5C8E63E12F2977860E66F01B45637",
+      "observed": "Resident access scene and real login UI."
+    },
+    {
+      "time_seconds": 37,
+      "file": "..\\review-frames\\hyperframes-full-product-repaired\\frame-37s.jpg",
+      "sha256": "C8AA8A6C8F4DA47B5BECCB152CFA5F0BC3DD37BC8677B689AB3EBCE5E172FC65",
+      "observed": "Rent-payment detail UI, distinct from the opening and resident scenes."
+    },
+    {
+      "time_seconds": 60,
+      "file": "..\\review-frames\\hyperframes-full-product-repaired\\frame-60s.jpg",
+      "sha256": "2DD1976A34AFFA9D1DC41A61C75502DC170D6717EF3568C3A73C1A0D98643C22",
+      "observed": "Administrator operations overview with visible report status."
+    },
+    {
+      "time_seconds": 73.9,
+      "file": "..\\review-frames\\hyperframes-full-product-repaired\\frame-final.jpg",
+      "sha256": "F4DEE82802FC5349620D2497F55CC38E09498A1100395529A566094FE7513CF6",
+      "observed": "Final E-BLOCK brand lockup and closing message."
+    }
+  ],
+  "contact_sheet": "C:\\Users\\Monoga\\Desktop\\Monoga OS\\e-block-moved\\sales\\demo-video\\review-frames\\hyperframes-full-product-repaired\\contact-sheet.jpg",
+  "hyperframes_check": {
+    "ok": true,
+    "command": "npx hyperframes check . --at 0,15,37,60,73.9 --no-browser-gpu --json",
+    "report": "repaired-check.json"
+  }
+}
